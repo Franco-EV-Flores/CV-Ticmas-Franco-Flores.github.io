@@ -1,20 +1,33 @@
 
 var boton = document.getElementById("boton-mas");
-var masInfo = document.getElementById("mas-info");
+var botonMenos = document.getElementById("boton-menos");
+
+var masInfo1 = document.getElementById("mas-info-1");
+var masInfo2 = document.getElementById("mas-info-2");
 var mostrando = true;
 
 boton.addEventListener("click", function(){
-  if(masInfo.style.display === "none") {
-    masInfo.style.display = "block";
-    boton.innerHTML = "Mostrar menos información";
-    mostrando = false;
-  } else {
-    masInfo.style.display = "none";
-    boton.innerHTML = "Mas informacion:";
-    mostrando = true;
-  }
-});
+  
+    masInfo1.style.display = "block";
+    masInfo2.style.display = "block";
+    botonMenos.style.display = "block"
+    boton.style.display = "none"
+    
+ 
+   
+  });
 
-$(document).ready(function(){
-    $("#boton-mas").button('dispose');
-});
+  botonMenos.addEventListener("click", function(){
+    masInfo1.style.display = "none";
+    masInfo2.style.display = "none";
+    botonMenos.style.display = "none"
+    boton.style.display = "block"
+    
+ 
+   
+  });
+
+
+
+boton.innerHTML = "Mas informacion:";
+mostrando = true;
