@@ -31,3 +31,19 @@ boton.addEventListener("click", function(){
 
 boton.innerHTML = "Mas informacion:";
 mostrando = true;
+
+html2canvas(document.body).then(function(canvas) {
+  var img = document.createElement("img");
+  img.src = canvas.toDataURL();
+  document.getElementById("preview").appendChild(img);
+  
+  var meta = document.createElement("meta");
+  meta.property = "og:image";
+  meta.content = img.src;
+  document.getElementsByTagName("head")[0].appendChild(meta);
+});
+
+var meta = document.createElement("meta");
+meta.property = "og:image";
+meta.content = img.src;
+document.getElementsByTagName("head")[0].appendChild(meta);
