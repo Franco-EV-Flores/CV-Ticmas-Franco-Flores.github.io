@@ -43,7 +43,4 @@ html2canvas(document.body).then(function(canvas) {
   document.getElementsByTagName("head")[0].appendChild(meta);
 });
 
-var meta = document.createElement("meta");
-meta.property = "og:image";
-meta.content = img.src;
-document.getElementsByTagName("head")[0].appendChild(meta);
+
